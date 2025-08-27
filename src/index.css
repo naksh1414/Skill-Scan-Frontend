@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="color" i] {
+  border-radius: 50%;
+  inline-size: 30px;
+  block-size: 30px;
+
+  /* Can set padding between outer circle and color swatch for Firefox here;
+   * it doesn't support a color-swarch-wrapper pseudoclass
+   */
+  padding: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(153, 153, 153);
+}
+
+/* Affects area between outer circle and color swatch. Firefox doesn't have an equivalent. */
+input[type="color" i]::-webkit-color-swatch-wrapper {
+  padding: 1px;
+}
+
+/* Affects the inner circle, i.e. the current color selection */
+input[type="color" i]::-webkit-color-swatch {
+  border-radius: 50%;
+}
+
+input[type="color" i]::-moz-color-swatch {
+  border-radius: 50%;
+}
+
+/* width */
+.sbar::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+.sbar::-webkit-scrollbar-track {
+  /* background: #888; */
+  border-radius: 5px;
+}
+
+/* Handle */
+.sbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.sbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+  }
+  .no-prnt {
+    display: none !important;
+  }
+     .bpFab,
+     .bpWebchat {
+       display: none;
+     }
+  #prnt {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 5mm;
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+  }
+}
+
+
+#contact-form div:nth-child(1) {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+#contact-form div canvas {
+  width: 153% !important;
+}

@@ -1,0 +1,26 @@
+.lot {
+    /* display: flex !important;
+  justify-content: center !important; */
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.lot div {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.lot canvas {
+    width: 150% !important;
+}
+.blog-content a {
+    color: #2563eb;
+    /* Tailwind blue-600 */
+    text-decoration: underline;
+}
+
+.blog-content a:hover {
+    color: #1e40af;
+    /* Tailwind blue-800 */
+}

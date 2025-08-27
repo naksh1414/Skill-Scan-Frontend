@@ -1,0 +1,191 @@
+/* Main Page Container */
+.resources-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.resources-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resources-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.resources-header p {
+  font-size: 1.1rem;
+  color: #a0b3d1; /* Lighter text color from theme */
+}
+
+/* Accordion Item */
+.accordion-item {
+  background-color: #0d314e; /* Darker blue shade */
+  border: 1px solid #1a4a6e;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 25px;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  color: #ffffff;
+}
+
+.accordion-header:hover {
+    background-color: #124063;
+}
+
+.header-icon {
+  font-size: 1.8rem;
+  margin-right: 20px;
+  color: #3EC8B8; /* Accent teal color */
+}
+
+.header-title {
+  flex-grow: 1;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.accordion-item.open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+
+/* Accordion Content (Playlist Cards) */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  padding: 0 25px;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 1000px; /* Set a large enough max-height for content */
+  padding: 10px 25px 25px 25px;
+}
+
+.resource-card {
+  background-color: #0A2540; /* Main background color */
+  border: 1px solid #1a4a6e;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: flex; /* Use flexbox for layout */
+  gap: 20px; /* Space between thumbnail and text */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.resource-card:last-child {
+  margin-bottom: 0;
+}
+
+.thumbnail-container {
+  flex-shrink: 0; /* Don't allow thumbnail to shrink */
+  width: 160px; /* Fixed width for the thumbnail */
+  height: 90px; /* Fixed height for 16:9 aspect ratio */
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.thumbnail-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container without distortion */
+  display: block;
+}
+
+.card-details {
+  flex-grow: 1; /* Allow details to take remaining space */
+}
+
+.resource-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+  color: #3EC8B8; /* Accent color for title */
+}
+
+.resource-card .creator {
+  font-style: italic;
+  color: #a0b3d1;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.resource-card .description {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px; /* Slightly smaller button */
+  border: 1px solid #3EC8B8;
+  background-color: transparent;
+  color: #3EC8B8;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 0.9rem; /* Smaller font for button */
+}
+
+.youtube-btn:hover {
+  background-color: #3EC8B8;
+  color: #0A2540;
+}
+
+.youtube-btn .btn-icon {
+  margin-left: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resource-card {
+    flex-direction: column; /* Stack thumbnail and details on smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+
+  .thumbnail-container {
+    width: 100%; /* Thumbnail takes full width */
+    height: 180px; /* Adjust height for better visibility */
+    margin-bottom: 15px;
+  }
+  .accordion-header {
+    padding: 15px 20px;
+  }
+  .header-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+  }
+  .header-title {
+    font-size: 1.2rem;
+  }
+  .accordion-item.open .accordion-content {
+    padding: 10px 20px 20px 20px;
+  }
+}

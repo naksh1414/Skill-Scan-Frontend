@@ -1,0 +1,15 @@
+#contact-form div:nth-child(1) {
+  /* display: flex !important;
+  justify-content: center !important; */
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+#contact-form div:nth-child(1) div {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+#contact-form div canvas {
+  width: 150% !important;
+}
