@@ -1,8 +1,7 @@
 // This service handles the communication with the Groq API
 
 // API key should be stored in an environment variable
-// In a real production app, this should be done server-side to protect your API key
-const API_KEY = "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";
+const API_KEY = import.meta.env.VITE_GROQ_API;
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 export const evaluateResume = async (resumeText, targetRole) => {
