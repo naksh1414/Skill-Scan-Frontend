@@ -62,25 +62,25 @@ function SignIn() {
       <Helmet>
         <title>Skill Scan</title>
       </Helmet>
-      <div className="w-[40%] h-[100%] relative hidden md:flex justify-center items-center z-10">
+      <div className="w-[50%] h-[100%] relative hidden md:flex justify-center items-center z-10">
         <img
           src={illustration}
           alt=""
-          className="w-full h-full object-fill absolute top-0 left-0 -z-10 "
+          className="absolute top-0 left-0 object-fill w-full h-full -z-10 "
         />
-        <div className="z-50 relative flex justify-center flex-col items-center">
+        <div className="relative z-50 flex flex-col items-center justify-center">
           <img src={illus} alt="" className="w-56" />
-          <h3 className="w-1/3 text-center text-white/90 font-medium text-2xl">
+          <h3 className="w-1/3 text-2xl font-medium text-center text-white/90">
             Unlock Your Potential
           </h3>
-          <p className="w-3/4 text-center text-white/70 text-sm mt-3">
+          <p className="w-3/4 mt-3 text-sm text-center text-white/70">
             Gain access to tools that redefine how you build your professional
             journey.
           </p>
         </div>
       </div>
       <div className="md:w-[60%] px-10 md:px-20 flex flex-col items-center md:justify-center mt-8 md:mt-0 h-[88%]">
-        <img src={logo} alt="" className="w-20" />
+        <img src={logo} alt="" className="object-cover h-20 w-60" />
         <h1 className="text-4xl font-semibold mt-2 dark:text-white/90 text-[#023247]">
           Hello Again!
         </h1>
@@ -89,7 +89,7 @@ function SignIn() {
           off.
         </p>
         <form
-          className="space-y-4 w-full flex flex-col justify-center items-center mt-4"
+          className="flex flex-col items-center justify-center w-full mt-4 space-y-4"
           onSubmit={handleSubmit}
         >
           <div className="w-full md:w-4/5">
@@ -126,7 +126,7 @@ function SignIn() {
               value={formData.password}
               onChange={handleInputChange}
             />
-            <p className="text-end self-end mt-2">
+            <p className="self-end mt-2 text-end">
               <Link to={"/forget-password"} className="text-blue-600">
                 Forget Password ?
               </Link>
@@ -142,7 +142,7 @@ function SignIn() {
               {isLoading ? (
                 <>
                   <svg
-                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    className="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
